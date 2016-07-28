@@ -33,7 +33,7 @@ end
 
 module ActiveRecord
   # Just make sure you have the latest version of your schema
-  class Schema < Migration
+  class Schema < Migration::Current
     def self.define(info={}, &block)
       instance_eval(&block)
     end
