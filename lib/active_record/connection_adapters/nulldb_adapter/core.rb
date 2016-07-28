@@ -117,6 +117,10 @@ class ActiveRecord::ConnectionAdapters::NullDBAdapter < ActiveRecord::Connection
     @tables.keys.map(&:to_s)
   end
 
+  def views
+    []
+  end
+
   # Retrieve table columns as defined by the schema
   def columns(table_name, name = nil)
     if @tables.size <= 1
